@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState, useRef } from 'react';
 import Card from '../Commons/Card';
 import { useMusic } from '../../contexts/MusicContext';
 
@@ -12,6 +12,7 @@ function Cards() {
                 songsList.map((item) => (
                     <Card
                         key={item.id}
+                        id={item.id}
                         title={item.title}
                         image={item.image}
                         artist={item.artist}
