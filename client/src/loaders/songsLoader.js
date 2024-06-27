@@ -1,5 +1,5 @@
-export default async function getSongsList() {
-    const songName = 'Love Yourself';
+export default async function getSongsList(songName) {
+    // const songName = 'Love Yourself';
     const url = `https://api.jamendo.com/v3.0/tracks/?client_id=e7752160&format=json&limit=10&namesearch=${encodeURIComponent(songName)}&order=popularity_total&include=musicinfo&durationmin=180`;
     const trackList = [];
     fetch(url)

@@ -1,16 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from '/images/logo.jpeg';
 import home from '/images/home.svg';
 import search from '/images/search.svg';
 import { NavLink } from 'react-router-dom';
+import { routeConstants } from '../../routeConstants';
+
+const route = routeConstants;
 
 function Topbar() {
+
     return (
         <div className='text-white bg-[#121212] w-full rounded-xl py-4 px-6 h-1/4'>
             <div className='sm:block'>
                 <ul className='flex flex-col gap-3'>
                     <NavLink
-                        to='/'
+                        to={route.homeRoute.path}
                         className={({ isActive }) => `${isActive ? "font-bold" : "font-thin"} flex flex-row items-center gap-2`}
                     >
                         <img
@@ -21,7 +25,7 @@ function Topbar() {
                     </NavLink>
 
                     <NavLink
-                        to='/'
+                        to={route.homeRoute.path}
                         className={({ isActive }) => `${isActive ? "font-bold" : "font-thin"} flex flex-row items-center gap-2`} 
                     >
                         <img 
@@ -32,7 +36,7 @@ function Topbar() {
                     </NavLink>
 
                     <NavLink
-                        to='#'
+                        to={route.searchRoute.path}
                         className={({ isActive }) => `${isActive ? "font-bold" : "font-thin"} flex flex-row items-center gap-2`} 
                     >
                         <img 

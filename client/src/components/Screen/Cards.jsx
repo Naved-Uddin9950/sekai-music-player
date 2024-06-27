@@ -7,7 +7,7 @@ function Cards() {
     const [songsList, setSongsList] = useMusic();
 
     return (
-        <div className='my-4 mx-2 grid grid-cols-4 gap-2 overflow-y-scroll h-[68%] overflow-x-hidden'>
+        <div className='my-4 mx-2 grid sm:grid-cols-4 grid-cols-1 min-[360px]:grid-cols-2 md:grid-cols-5 gap-4 overflow-y-scroll h-[68%] overflow-x-hidden'>
             {
                 songsList.map((item) => (
                     <Card
